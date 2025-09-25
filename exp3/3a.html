@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Semantic HTML Example</title>
+  <style>
+    :root {
+      --accent: #0b6efd;
+      --muted: #666;
+      --bg: #f8f9fb;
+      --card: #ffffff;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: #222;
+      line-height: 1.45;
+    }
+    header, footer {
+      background: var(--card);
+      padding: 18px 24px;
+      box-shadow: 0 1px 0 rgba(0,0,0,0.04);
+    }
+    header h1 { margin: 0; font-size: 1.35rem; color: var(--accent); }
+    nav a { margin-right: 12px; text-decoration: none; color: var(--accent); }
+    .wrap {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 20px;
+      max-width: 1100px;
+      margin: 20px auto;
+      padding: 0 16px;
+    }
+    main {
+      min-width: 0;
+    }
+    article, aside {
+      background: var(--card);
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(15, 23, 42, 0.03);
+    }
+    article + article { margin-top: 16px; }
+    figure {
+      margin: 0;
+      display: block;
+    }
+    figure img { width: 100%; height: auto; border-radius: 6px; display:block; }
+    figcaption { font-size: 0.9rem; color: var(--muted); margin-top: 6px; }
+    .meta { font-size: 0.85rem; color: var(--muted); margin-bottom: 10px; }
+    .tags span {
+      display: inline-block;
+      font-size: 0.8rem;
+      margin-right: 6px;
+      padding: 4px 8px;
+      background: #eef6ff;
+      color: var(--accent);
+      border-radius: 999px;
+    }
+    .highlight { background: linear-gradient(90deg,#fff8cc,#e8fff1); padding: 2px 6px; border-radius: 4px; }
+    footer .small { font-size: 0.85rem; color: var(--muted); }
+    @media (max-width: 880px) {
+      .wrap { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+      <div>
+        <h1>Nature & Code</h1>
+        <p class="small" style="margin:2px 0 0; color:var(--muted)">Explorations in design, code and the outdoors</p>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#articles">Articles</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <div class="wrap">
+    <main>
+      <article aria-labelledby="art1-title">
+        <header>
+          <h2 id="art1-title">A Walk Through the Wetland</h2>
+          <div class="meta">By <strong>R. Kumar</strong> · <time datetime="2025-09-01">Sept 1, 2025</time></div>
+        </header>
+
+        <figure>
+          <img src="https://via.placeholder.com/900x400.png?text=Wetland+Sunrise" alt="Sunrise over a wetland with mist" />
+          <figcaption>Sunrise over the wetland — early morning mist lifts as the sun warms the reeds.</figcaption>
+        </figure>
+
+        <section>
+          <p>
+            Wetlands are rich ecosystems that act as natural water filters and wildlife nurseries.
+            In this trip report I talk about the plants and methods I used to record bird calls.
+            Note the <span class="highlight">small details</span> — often the tiny things matter most.
+          </p>
+        </section>
+
+        <section>
+          <h3>Field Notes</h3>
+          <p>
+            I used a small recorder and a smartphone app. The location is quiet at dawn; we observed
+            three species of waders and two frogs. <span title="confidence">Confidence: high</span>.
+          </p>
+          <div class="tags" aria-hidden="true">
+            <span>nature</span><span>field</span><span>audio</span>
+          </div>
+        </section>
+
+        <footer>
+          <p class="small">Published in the <em>Field Notebook</em> series.</p>
+        </footer>
+      </article>
+      <article aria-labelledby="art2-title">
+        <header>
+          <h2 id="art2-title">HTML5 Semantics: Why They Matter</h2>
+          <div class="meta">By <strong>M. Patel</strong> · <time datetime="2025-06-15">June 15, 2025</time></div>
+        </header>
+
+        <section>
+          <p>
+            Semantic tags like <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code>, and <code>&lt;figure&gt;</code>
+            make content clearer to browsers, search engines, and assistive technologies. Use them to
+            express the meaning of content rather than relying only on <code>&lt;div&gt;</code>.
+          </p>
+        </section>
+
+        <section>
+          <h3>Quick example</h3>
+          <p>
+            Inline elements like <span title="example inline"> <strong>&lt;span&gt;</strong> </span> are perfect
+            for small bits of text you want to style or mark up without creating a new block.
+          </p>
+        </section>
+
+        <footer>
+          <p class="small">Article license: CC BY-NC</p>
+        </footer>
+      </article>
+    </main>
+    <aside aria-labelledby="aside-title">
+      <h3 id="aside-title">About the Author</h3>
+      <p>
+        Short bio: <em>R. Kumar</em> is a developer and amateur naturalist who writes about accessible
+        front-end patterns and fieldwork.
+      </p>
+
+      <section>
+        <h4>Related</h4>
+        <nav aria-label="Related articles">
+          <ul style="padding-left:1.05rem;margin:0;">
+            <li><a href="#art1-title">Wetland mapping basics</a></li>
+            <li><a href="#art2-title">Semantics & accessibility</a></li>
+            <li><a href="#contact">Workshops</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <section>
+        <h4>Quick facts</h4>
+        <p class="small">Member since <time datetime="2021-03">Mar 2021</time></p>
+      </section>
+    </aside>
+  </div>
+  <footer>
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;">
+      <div class="small">&copy; <span id="year"></span> Nature & Code</div>
+      <div class="small">Built with semantic HTML • <a href="#contact">Contact</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Input Methods</title>
+</head>
+<body>
+  <h1>Different Ways to Take Input</h1>
+  <script>
+    let name = prompt("Enter your name:");
+    document.write("Name from prompt: " + name + "<br>");
+  </script>
+
+  <form id="inputForm">
+    Enter your age: <input type="number" id="ageInput">
+    <button type="button" onclick="getAge()">Submit</button>
+  </form>
+  <p id="displayAge"></p>
+  <script>
+    function getAge() {
+      let age = document.getElementById("ageInput").value;
+      document.getElementById("displayAge").textContent = "Age from input field: " + age;
+    }
+  </script>
+</body>
+</html>

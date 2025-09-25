@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thumbnail Gallery</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .gallery-item {
+            text-align: center;
+        }
+        .gallery-item img {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #555;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .gallery-item img:hover {
+            transform: scale(1.1);
+        }
+        .caption {
+            margin-top: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Gallery</h1>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <a href="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41477-019-0374-3/MediaObjects/41477_2019_374_Figa_HTML.jpg" target="_blank">
+                <img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41477-019-0374-3/MediaObjects/41477_2019_374_Figa_HTML.jpg" alt="Image 1">
+            </a>
+            <div class="caption">Forest</div>
+        </div>
+
+        <div class="gallery-item">
+            <a href="https://i.pinimg.com/736x/84/69/28/846928829c417540f0b7ba19c3ac3982.jpg" target="_blank">
+                <img src="https://i.pinimg.com/736x/84/69/28/846928829c417540f0b7ba19c3ac3982.jpg" alt="Image 2">
+            </a>
+            <div class="caption">waterfall</div>
+        </div>
+
+        <div class="gallery-item">
+            <a href="https://images.stockcake.com/public/4/4/9/4493f627-e698-41af-9c13-8c0182137426_large/enchanted-forest-wildlife-stockcake.jpg" target="_blank">
+                <img src="https://images.stockcake.com/public/4/4/9/4493f627-e698-41af-9c13-8c0182137426_large/enchanted-forest-wildlife-stockcake.jpg" alt="Image 3">
+            </a>
+            <div class="caption">Forest</div>
+        </div>
+
+        <div class="gallery-item">
+            <a href="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=" target="_blank">
+                <img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=" alt="Image 4">
+            </a>
+            <div class="caption">Sunrise</div>
+        </div>
+    </div>
+</body>
+</html>

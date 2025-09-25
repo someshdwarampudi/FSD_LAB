@@ -1,0 +1,7 @@
+p.external {
+  color: crimson;
+  font-weight: bold;
+  border: 1px solid crimson;
+  padding: 8px;
+  border-radius: 5px;
+}

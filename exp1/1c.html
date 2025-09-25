@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Images</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            cursor: pointer;
+            margin: 15px;
+            border: 3px solid #e54c1d;
+            border-radius: 30%;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <h2>Click the images to visit profiles</h2>
+
+    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://t4.ftcdn.net/jpg/01/36/00/77/360_F_136007759_LKByXbWmwdT4GBeQdk8f5sad00lwPajb.jpg" class="profile-image">
+    
+    </a>
+
+
+    <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.freepik.com/premium-vector/boy-as-part-group-friends-all-giving-thumbs-up-together-cartoon-vector-illustration_851674-43568.jpg" alt="Friend Profile" class="profile-image">
+    </a>
+</body>
+</html>

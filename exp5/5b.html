@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Image Example</title>
+  <style>
+    body {
+      height: 2000px;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+    }
+
+    .background-image {
+    
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-15deg);
+      width: 400px;
+      height: 400px;
+      background-image: url('https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?s=612x612&w=0&k=20&c=A63koPKaCyIwQWOTFBRWXj_PwCrR4cEoOw2S9Q7yVl8=');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      z-index: -1;
+      opacity: 0.8;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 100px;
+      color: #333;
+    }
+
+    p {
+      width: 60%;
+      margin: 50px auto;
+      line-height: 1.6;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-image"></div>
+
+  <h1>Background Image Demo</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec justo at risus facilisis hendrerit.</p>
+  <p>Scroll down to see the background image stay fixed in position while tilting horizontally.</p>
+
+</body>
+</html>
