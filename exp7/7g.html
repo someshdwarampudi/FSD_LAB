@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Object Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f0f4f8;
+    }
+    h1 {
+      text-align: center;
+      color: #1a5276;
+    }
+    p {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Date Object Demo</h1>
+  <p id="now"></p>
+  <p id="year"></p>
+  <p id="month"></p>
+  <p id="day"></p>
+  <p id="hours"></p>
+  <p id="minutes"></p>
+
+  <script>
+    let now = new Date();
+
+    document.getElementById("now").textContent = "Current Date & Time: " + now;
+    document.getElementById("year").textContent = "Year: " + now.getFullYear();
+    document.getElementById("month").textContent = "Month: " + (now.getMonth() + 1);
+    document.getElementById("day").textContent = "Date: " + now.getDate();
+    document.getElementById("hours").textContent = "Hours: " + now.getHours();
+    document.getElementById("minutes").textContent = "Minutes: " + now.getMinutes();
+  </script>
+
+</body>
+</html>

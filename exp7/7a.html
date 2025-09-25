@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Object Demo</title>
+</head>
+<body>
+
+  <h1 id="title">Document Object Properties and Methods</h1>
+  <p id="info"></p>
+  <button onclick="showDocumentInfo()">Show Document Info</button>
+
+  <script>
+    function showDocumentInfo() {
+      let docTitle = document.title;
+      let docURL = document.URL;
+      let docDomain = document.domain;
+      alert("Document Title: " + docTitle);
+      alert("Document URL: " + docURL);
+      alert("Document Domain: " + docDomain);
+      document.getElementById("title").textContent = "Title Changed using document.getElementById()";
+      document.getElementById("info").innerHTML = "This paragraph is updated using <strong>document.getElementById()</strong> method.";
+    }
+  </script>
+
+</body>
+</html>

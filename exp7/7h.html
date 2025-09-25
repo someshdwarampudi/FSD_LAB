@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User-Defined Object Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f0f4f8;
+      text-align: center;
+    }
+    h1 {
+      color: #1a5276;
+    }
+    p {
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>User-Defined Object Demo</h1>
+  <button onclick="showPersons()">Show Persons Info</button>
+
+  <script>
+    // Constructor
+    function Person(name, age) {
+      this.name = name; // property
+      this.age = age;   // property
+
+      // Method
+      this.canVote = function() {
+        return this.age >= 18 ? "Yes" : "No";
+      }
+
+      // Getter
+      this.getInfo = function() {
+        return `Name: ${this.name}, Age: ${this.age}, Can Vote: ${this.canVote()}`;
+      }
+
+      // Setter
+      this.setAge = function(newAge) {
+        this.age = newAge;
+      }
+    }
+
+    function showPersons() {
+      let person1 = new Person("Alice", 20);
+      let person2 = new Person("Bob", 15);
+
+      alert(person1.getInfo());
+      alert(person2.getInfo());
+
+      person2.setAge(18);
+      alert("After updating age: " + person2.getInfo());
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math Object Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f0f4f8;
+    }
+    h1 {
+      text-align: center;
+      color: #1a5276;
+    }
+    p {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Math Object Demo</h1>
+  <p id="abs"></p>
+  <p id="round"></p>
+  <p id="ceil"></p>
+  <p id="floor"></p>
+  <p id="random"></p>
+  <p id="sqrt"></p>
+
+  <script>
+    let num = -7.5;
+
+    document.getElementById("abs").textContent = "Absolute Value of " + num + " : " + Math.abs(num);
+    document.getElementById("round").textContent = "Rounded Value: " + Math.round(num);
+    document.getElementById("ceil").textContent = "Ceil Value: " + Math.ceil(num);
+    document.getElementById("floor").textContent = "Floor Value: " + Math.floor(num);
+    document.getElementById("random").textContent = "Random Number (0-100): " + Math.floor(Math.random() * 101);
+    document.getElementById("sqrt").textContent = "Square Root of 64: " + Math.sqrt(64);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String Object Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f0f4f8;
+    }
+    h1 {
+      text-align: center;
+      color: #1a5276;
+    }
+    p {
+      font-size: 18px;
+      margin: 8px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>String Object Demo</h1>
+  <p id="length"></p>
+  <p id="uppercase"></p>
+  <p id="lowercase"></p>
+  <p id="substring"></p>
+  <p id="includes"></p>
+  <p id="replace"></p>
+
+  <script>
+    let str = "Hello JavaScript";
+
+    document.getElementById("length").textContent = "Length of string: " + str.length;
+    document.getElementById("uppercase").textContent = "Uppercase: " + str.toUpperCase();
+    document.getElementById("lowercase").textContent = "Lowercase: " + str.toLowerCase();
+    document.getElementById("substring").textContent = "Substring (0,5): " + str.substring(0,5);
+    document.getElementById("includes").textContent = "Includes 'Java': " + str.includes("Java");
+    document.getElementById("replace").textContent = "Replace 'JavaScript' with 'JS': " + str.replace("JavaScript", "JS");
+  </script>
+
+</body>
+</html>

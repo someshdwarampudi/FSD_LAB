@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Array Object Interactive Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #1a5276;
+    }
+    p {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    button {
+      margin: 5px;
+      padding: 10px 15px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Array Object Interactive Demo</h1>
+
+  <p id="display">Array: []</p>
+
+  <button onclick="showArray()">Show Original Array</button>
+  <button onclick="showLength()">Show Length</button>
+  <button onclick="joinArray()">Join Array</button>
+  <button onclick="addElements()">Add Elements (push & unshift)</button>
+  <button onclick="removeElements()">Remove Elements (pop & shift)</button>
+  <button onclick="sortArray()">Sort Array</button>
+
+  <script>
+    let fruits = ["Apple", "Banana", "Mango", "Orange"];
+
+    function showArray() {
+      document.getElementById("display").textContent = "Array: " + fruits;
+    }
+
+    function showLength() {
+      document.getElementById("display").textContent = "Array Length: " + fruits.length;
+    }
+
+    function joinArray() {
+      document.getElementById("display").textContent = "Joined Array: " + fruits.join(" - ");
+    }
+
+    function addElements() {
+      fruits.push("Pineapple");
+      fruits.unshift("Strawberry");
+      document.getElementById("display").textContent = "After adding: " + fruits;
+    }
+
+    function removeElements() {
+      fruits.pop();
+      fruits.shift();
+      document.getElementById("display").textContent = "After removing: " + fruits;
+    }
+
+    function sortArray() {
+      fruits.sort();
+      document.getElementById("display").textContent = "Sorted Array: " + fruits;
+    }
+  </script>
+
+</body>
+</html>
