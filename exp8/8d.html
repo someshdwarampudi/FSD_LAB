@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Object Iteration</title>
+</head>
+<body>
+  <script>
+    let student = { name: "Ravi", age: 21, course: "IT" };
+
+    document.write("<b>for-in loop:</b><br>");
+    for (let key in student) {
+      document.write(key + ": " + student[key] + "<br>");
+    }
+
+    let arr = ["Apple", "Banana", "Mango"];
+
+    document.write("<br><b>forEach loop:</b><br>");
+    arr.forEach(function(item) {
+      document.write(item + "<br>");
+    });
+
+    document.write("<br><b>for-of loop:</b><br>");
+    for (let val of arr) {
+      document.write(val + "<br>");
+    }
+  </script>
+</body>
+</html>
