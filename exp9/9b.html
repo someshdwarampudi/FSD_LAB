@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Functions with Events</title>
+</head>
+<body>
+  <h2>Enter a number:</h2>
+  <input type="text" id="num" />
+  <br><br>
+  <button onclick="showFactorial()">Factorial</button>
+  <button onclick="showFibonacci()">Fibonacci</button>
+  <button onclick="showPrimes()">Prime Numbers</button>
+  <button onclick="showPalindrome()">Palindrome</button>
+  <p id="result"></p>
+
+  <script>
+    function getNumber() {
+      return parseInt(document.getElementById("num").value);
+    }
+    function showFactorial() {
+      let n = getNumber(), fact = 1;
+      for (let i = 1; i <= n; i++) fact *= i;
+      document.getElementById("result").innerHTML = "Factorial: " + fact;
+    }
+    function showFibonacci() {
+      let n = getNumber(), series = [0, 1];
+      for (let i = 2; i < n; i++) series[i] = series[i - 1] + series[i - 2];
+      document.getElementById("result").innerHTML = "Fibonacci: " + series.slice(0, n).join(", ");
+    }
+    function showPrimes() {
+      let n = getNumber(), result = [];
+      for (let i = 2; i <= n; i++) {
+        let prime = true;
+        for (let j = 2; j <= Math.sqrt(i); j++) if (i % j === 0) { prime = false; break; }
+        if (prime) result.push(i);
+      }
+      document.getElementById("result").innerHTML = "Primes up to " + n + ": " + result.join(", ");
+    }
+    function showPalindrome() {
+      let n = getNumber(), str = n.toString();
+      let isPal = (str === str.split("").reverse().join(""));
+      document.getElementById("result").innerHTML = isPal ? n + " is Palindrome" : n + " is Not Palindrome";
+    }
+  </script>
+</body>
+</html>

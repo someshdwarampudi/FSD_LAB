@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+</head>
+<body>
+  <h2>Registration Form</h2>
+  <form onsubmit="return validateForm()">
+    Name: <input type="text" id="name"><br><br>
+    Mobile: <input type="text" id="mobile"><br><br>
+    Email: <input type="text" id="email"><br><br>
+    <input type="submit" value="Register">
+  </form>
+  <p id="msg" style="color:red;"></p>
+
+  <script>
+    function validateForm() {
+      let name = document.getElementById("name").value;
+      let mobile = document.getElementById("mobile").value;
+      let email = document.getElementById("email").value;
+      let namePattern = /^[A-Za-z][A-Za-z0-9]{5,}$/;
+      let mobilePattern = /^[0-9]{10}$/;
+      let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+      if (!namePattern.test(name)) {
+        document.getElementById("msg").innerText = "Invalid Name (must start with letter, min 6 chars)";
+        return false;
+      }
+      if (!mobilePattern.test(mobile)) {
+        document.getElementById("msg").innerText = "Invalid Mobile (10 digits required)";
+        return false;
+      }
+      if (!emailPattern.test(email)) {
+        document.getElementById("msg").innerText = "Invalid Email (must be in format x@x.xx)";
+        return false;
+      }
+      document.getElementById("msg").style.color = "green";
+      document.getElementById("msg").innerText = "Registration Successful!";
+      return false;
+    }
+  </script>
+</body>
+</html>

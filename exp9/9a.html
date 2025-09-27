@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Functions Example</title>
+</head>
+<body>
+  <script>
+    function factorial(n) {
+      let fact = 1;
+      for (let i = 1; i <= n; i++) fact *= i;
+      return fact;
+    }
+    function fibonacci(n) {
+      let series = [0, 1];
+      for (let i = 2; i < n; i++) series[i] = series[i - 1] + series[i - 2];
+      return series.slice(0, n);
+    }
+    function primes(n) {
+      let result = [];
+      for (let i = 2; i <= n; i++) {
+        let isPrime = true;
+        for (let j = 2; j <= Math.sqrt(i); j++) {
+          if (i % j === 0) { isPrime = false; break; }
+        }
+        if (isPrime) result.push(i);
+      }
+      return result;
+    }
+    function isPalindrome(num) {
+      let str = num.toString();
+      return str === str.split("").reverse().join("");
+    }
+
+    let num = parseInt(prompt("Enter a number:"));
+    document.write("Factorial: " + factorial(num) + "<br>");
+    document.write("Fibonacci: " + fibonacci(num).join(", ") + "<br>");
+    document.write("Primes up to " + num + ": " + primes(num).join(", ") + "<br>");
+    document.write(num + (isPalindrome(num) ? " is Palindrome" : " is Not Palindrome"));
+  </script>
+</body>
+</html>
